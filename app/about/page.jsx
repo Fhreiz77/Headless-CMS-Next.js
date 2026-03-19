@@ -1,7 +1,9 @@
+import Heading from "../../components/Heading";
+
 export default function AboutPage() {
   return (
     <>
-      <h1>Halaman About</h1>
+      <Heading>Halaman About</Heading>
       <p>.......</p>
     </>
   );

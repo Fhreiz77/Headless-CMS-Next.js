@@ -1,15 +1,13 @@
 "use client";
 
 import { useEffect } from "react";
+import Heading from "../components/Heading";
 
 export default function Home() {
-  useEffect(() => {
-    window.alert("Hello Next.js");
-  }, []);
   return (
-    <>
-      <h1>My Next.js App</h1>
+    <main>
+      <Heading>My Next.js App</Heading>
       <p>Hello world, this is next.js app</p>
-    </>
+    </main>
   );
 }

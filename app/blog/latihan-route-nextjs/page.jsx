@@ -1,7 +1,9 @@
+import Heading from "../../../components/Heading";
+
 export default function RouteExercise() {
   return (
     <>
-      <h1>Latihan route Next.js</h1>
+      <Heading>Latihan route Next.js</Heading>
       <p>Ciao</p>
     </>
   );
