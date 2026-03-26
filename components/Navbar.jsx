@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <nav>
-      <ul className="flex gap-2 bg-slate-800">
+      <ul className="flex gap-2">
         <li>
           <Link
             href="/"
-            className="text-mist-200 hover:text-cyan-600 hover:underline "
+            className="text-mist-800 hover:text-kuze-orange transition-all font-montserrat "
           >
             Home
           </Link>
@@ -15,7 +15,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/blog"
-            className="text-mist-200 hover:text-cyan-600 hover:underline "
+            className="text-mist-800 hover:text-kuze-orange transition-all font-montserrat "
           >
             Blog
           </Link>
@@ -23,7 +23,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/about"
-            className="text-mist-200 hover:text-cyan-600 hover:underline "
+            className="text-mist-800 hover:text-kuze-orange transition-all font-montserrat "
           >
             About
           </Link>
@@ -31,7 +31,7 @@ export default function Navbar() {
         <li>
           <Link
             href="/contact"
-            className="text-mist-200 hover:text-cyan-600 hover:underline "
+            className="text-mist-800 hover:text-kuze-orange transition-all font-montserrat "
             prefetch={false}
           >
             Contact

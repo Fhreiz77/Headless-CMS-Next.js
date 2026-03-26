@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-kuze-orange: #ff0000;
+}
 
 body {
   /* font-family: "Courier New", Courier, monospace; */

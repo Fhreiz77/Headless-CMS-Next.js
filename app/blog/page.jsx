@@ -1,19 +1,24 @@
-import Link from "next/link";
-import Heading from "../../components/Heading";
+import Heading from "@/components/Heading";
+import PostCard from "@/components/PostCard";
+import { getAllPosts } from "@/lib/post";
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllPosts();
   return (
     <>
       <Heading>Blog</Heading>
-      <p>List of Posts</p>
-      <ul>
-        <li>
-          <Link href="/belajar-nextjs">Belajar-nextjs</Link>
-        </li>
-        <li>
-          <Link href="/latihan-route-nextjs">latihan-route-nextjs</Link>
-        </li>
-      </ul>
+      <h2 className="text-2xl mb-3">List of Posts:</h2>
+
+      {posts.map((post) => (
+        <PostCard
+          title={post.title}
+          href={`/blog/${post.slug}`}
+          image={post.image}
+          description={post.description}
+          date={post.date}
+          author={post.author}
+        />
+      ))}
     </>
   );
 }
