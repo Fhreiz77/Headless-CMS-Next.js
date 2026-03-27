@@ -1,10 +1,14 @@
 import Heading from "@/components/Heading";
 
+export const metadata = {
+  title: "About",
+};
+
 export default function AboutPage() {
   return (
     <>
-      <Heading>Halaman About</Heading>
-      <p>.......</p>
+      <Heading>About</Heading>
+      <p>Halaman dari about</p>
     </>
   );
 }

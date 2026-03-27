@@ -3,7 +3,10 @@ import "./globals.css";
 import { montserrat } from "@/app/fonts";
 
 export const metadata = {
-  title: "Situs Next.js",
+  title: {
+    default: "Situs Next.js",
+    template: "%s | Situs Next.js",
+  },
   description: "Kumpulan tutorial belajar next js dari dasar",
 };
 

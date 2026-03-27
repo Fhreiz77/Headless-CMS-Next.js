@@ -2,6 +2,15 @@ import Image from "next/image";
 import Heading from "@/components/Heading";
 import { getPost } from "@/lib/post";
 
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const post = await getPost(slug);
+  return {
+    title: post.title,
+    description: post.description,
+  };
+}
+
 export default async function PostPage({ params }) {
   const { slug } = await params;
   const post = await getPost(slug);
