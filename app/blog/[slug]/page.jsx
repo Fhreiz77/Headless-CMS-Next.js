@@ -1,6 +1,12 @@
 import Image from "next/image";
 import Heading from "@/components/Heading";
-import { getPost } from "@/lib/post";
+import { getPost, getSlugs } from "@/lib/post";
+import ShareLinkButton from "@/components/ShareLinkButton";
+
+export async function generateStaticParams() {
+  const slugs = await getSlugs();
+  return slugs.map((slug) => ({slug}));
+}
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
@@ -17,9 +23,12 @@ export default async function PostPage({ params }) {
   return (
     <>
       <Heading>{post.title}</Heading>
-      <p className="italic text-sm pb-2">
-        {post.date} - {post.author}
-      </p>
+      <div className="flex gap-3 pb-2 items-baseline">
+        <p className="italic text-sm pb-2">
+          {post.date} - {post.author}
+        </p>
+        <ShareLinkButton />
+      </div>
       <Image
         src={post.image}
         alt="image-1"
